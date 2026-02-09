@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-const host = window.location.hostname;
-
 export const API_URL = `https://seera-backend.onrender.com`
 
 const api = axios.create({
