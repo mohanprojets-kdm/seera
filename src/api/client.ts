@@ -5,7 +5,7 @@ const host = window.location.hostname;
 export const API_URL = `https://seera-backend.onrender.com`
 
 const api = axios.create({
-    baseURL: API_LIVE_URL,
+    baseURL: API_URL,
     headers: {
         'Content-Type': 'application/json',
     },
