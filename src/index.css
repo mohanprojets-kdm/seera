@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- BASE ---------- */
+@layer base {
+  body {
+    background-color: #f9fafb;
+    /* gray-50 */
+    color: #111827;
+    /* gray-900 */
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* ---------- COMPONENTS ---------- */
+@layer components {
+  .btn-primary {
+    background-color: black;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s;
+  }
+
+  .btn-primary:hover {
+    background-color: #1f2937;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  }
+
+  .btn-primary:active {
+    transform: scale(0.95);
+  }
+
+  .btn-secondary {
+    border: 2px solid black;
+    background: white;
+    color: black;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s;
+  }
+
+  .btn-secondary:hover {
+    background: black;
+    color: white;
+  }
+
+  .btn-icon {
+    padding: 0.625rem;
+    border-radius: 9999px;
+    transition: all 0.2s;
+  }
+
+  .btn-icon:hover {
+    background: #f3f4f6;
+  }
+
+  .btn-icon:active {
+    background: #e5e7eb;
+    transform: scale(0.95);
+  }
+}
+
+/* ---------- UTILITIES ---------- */
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Custom Scrollbar for FilterSidebar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Touch-friendly tap areas */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Prevent text selection on interactive elements */
+  .no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Image optimization */
+  .image-render-optimization {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center px-10 py-4 font-semibold tracking-wide bg-black text-white transition-all duration-300 hover:bg-zinc-900 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-black/30;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-10 py-4 font-semibold tracking-widest text-sm border border-black/20 hover:border-black hover:bg-black hover:text-white transition-all duration-300 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-black/20;
+  }
+
+  .input {
+    @apply w-full px-5 py-3 bg-white border border-black/10 text-sm font-medium focus:border-black focus:ring-2 focus:ring-black/10 transition-all duration-200;
+  }
+}
